@@ -1,0 +1,184 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    /*========== Colors ==========*/
+    /* Color mode HSL(hue, saturation, lightness) */
+    --hue-1: 29;
+    --hue-2: 203;
+    --color-primary: hsl(var(--hue-1), 100%, 50%);
+    --color-primary-variant: hsl(var(--hue-1), 72%, 63%);
+    --color-bg-1: hsl(var(--hue-2), 100%, 5%);
+    --color-bg-2: hsl(var(--hue-2), 100%, 9%);
+    --color-bg-3: hsl(var(--hue-2), 100%, 15%);
+    --color-bg-4: hsl(var(--hue-2), 100%, 29%);
+    --color-light: hsl(var(--hue-2), 100%, 83%);
+    --color-white: hsl(0, 0%, 90%);
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h1-font-size: 4rem;
+    --h2-font-size: 3.5rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*========== Font weight ==========*/
+    --font-medium: 400;
+    --font-semi-bold: 600;
+
+    /*========== Margenes Bottom ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-5: .5rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+
+    /*========== Etc ==========*/
+    --container-width-lg: 88%;
+    --container-width-md: 92%;
+
+    --transition: all 400ms ease;
+}
+
+/*=============== BASE ===============*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--color-bg-3);
+    color: var(--color-light);
+    line-height: 1.7s;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-light);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+h1,
+h2 {
+    line-height: 1.1;
+    font-weight: var(--font-medium);
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    color: var(--color-white);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+}
+
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+    max-width: 2160px;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+/*=============== NAV ===============*/
+nav {
+    height: 5rem;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+/* nav class on scroll using javascript */
+.windows-scrolled {
+    background: var(--color-bg-2);
+    border-bottom: 0.2rem solid var(--color-bg-3);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.nav__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* only need on tablets and phones */
+.nav__toggle-btn {
+    display: none;
+}
+
+.nav__logo {
+    width: 7.5rem;
+}
+
+.nav__links {
+    display: flex;
+    gap: 4rem;
+}
+
+.nav__socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav__socials a {
+    width: 2rem;
+    height: 2rem;
+    background: linear-gradient(var(--color-primary-variant), var(--color-primary));
+    border-radius: 0.5rem;
+    color: var(--color-bg-4);
+    display: grid;
+    place-items: center;
+}
+
+.nav__socials a:hover {
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+/*=============== HEADER ===============*/
+
+.satu {
+    height: 5000px;
+}
